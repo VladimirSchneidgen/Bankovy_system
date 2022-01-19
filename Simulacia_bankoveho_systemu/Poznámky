@@ -1,0 +1,19 @@
+Triedy sú rozdelené do troch balíkov (packegov): 
+
+Package Bankomat obsahuje triedy:
+- Okno.java --> trieda, od ktorej dedia všetky zvyšné triedy v balíku. Trieda obsahuje funkcie, ktoré čítajú z textového súboru kľúč
+  pre zašifrovanie čísla karty, ďalší kľúč pre zašifrovanie hesla, URL pre spojenie s MySQL Workbench a prihlasovacie meno a heslo 
+  do MySQL Workbench. Ďalej obsahuje funkciu ktorá vráti tmavomodré pozadie, funkciu ktorá zašifruje a dešifruje číslo karty a funkciu
+  ktorá zašifruje a dešifruje heslo.
+- Registracia.java --> trieda, prostredníctvom ktorej sa zaregustrujú nový klienti. Nakonci im vygeneruje a vypíše jedinečné číslo 
+  karty a heslo a údaje najskôr zašifruje dvoma rozličnými kľúčmi a vloží do databázy prostredníctvom SQL príkazu INSERT INTO.
+- Login.java --> obsahuje login menu, klient musí zadať korektné údaje (číslo karty a heslo). Ďalej funkcia tieto údaje zašifruje 
+  a hľadá zhodu s už zašifrovanými údajmi v databáze
+- HlavneMenu.java --> po úspešnom prihlásení zobrazí používateľovi hlavné menu, kde má na výber zo šiestich možností: 
+  Vklad, výber, zmena denného limitu, zmenu PINu, pozrieť si zostatok na účte či ukončiť aktivitu a odhlásiť sa.
+- DennyLimit.java --> používateľ je schopný nastaviť si maximálny limit jednorázového výberu. 
+- Vklad.java --> umožní vložiť neobmedzené množstvo peňažných prostriedkov na účet.
+- ZostatokNaUcte.java --> vypíše používateľovi aktuálny zostatok na účte. Ponúka aj možnosť pomyselného vytlačenia zostatku, po ktorom
+  klientovi automaticky strhne z účtu 5 centov.
+- Vyber.java --> umožňuje vybrať určitý obnos peňažných prostriedkov, ktorý je však limitovaný aktuálnym limitom pre výber.
+- ZmenaPin.java --> umožňuje zmeniť PIN.
